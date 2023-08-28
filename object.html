@@ -1,0 +1,111 @@
+let person = {
+    name: "John",
+    favFood: "Jollof",
+    siblings: ["mary", "joe"]
+}
+
+console.log(person)
+
+person.siblings.push("James")
+
+console.log(person)
+
+
+// console.log(person.name)
+// console.log(person.favFood)
+
+// console.log(person["name"])
+
+// console.log(person)
+
+// person.name = "Samuel"
+
+// console.log(person)
+
+// let students = [
+//     {name: "Kofi", age: 12},
+//     {name: "James", age: 13},
+    
+// ]
+
+class Robot {
+    constructor(robotName, robotSize) {
+        this.robotName = robotName
+        this.robotSize = robotSize
+    }
+    
+    eat() {
+        console.log(this.robotSize + " is eating")
+    }
+    
+    walk() {
+        console.log("walking")
+    }
+
+    sleep() {
+        console.log("sleeping")
+    }
+}
+
+function addTwoNums(num1, num2) {
+    console.log(num1 + num2)
+}
+
+let addThreeNums = (num1, num2, num3) => {
+     console.log(num1 + num2 + num3)
+}
+
+addThreeNums(12, 45, 7)
+addTwoNums(10, 90)
+
+// addTwoNums(12, 56)
+// addTwoNums(1, 6)
+
+
+let robot1 = new Robot("First", 70)
+let robot2 = new Robot("second", 80)
+
+robot1.eat()
+
+class Human {
+    constructor(name) {
+        this.name = name
+    }
+    
+    eat() {
+        console.log(this.name + " is eating")
+    }
+
+    sleep() {
+        console.log("sleeping")
+    }
+}
+
+class Female extends Human {
+    constructor(name) {
+        super(name)
+        
+        this.name = name
+    }
+    
+    doFemaleStuff() {
+        console.log("doing female stuff")
+    }
+}
+
+class Male extends Human {
+    constructor(name) {
+        super(name)
+        
+        this.name = name
+    }
+    
+    doMaleStuff() {
+        console.log("doing male stuff")
+    }
+}
+
+let kofi = new Male("Kofi")
+
+kofi.doMaleStuff()
+kofi.eat()
